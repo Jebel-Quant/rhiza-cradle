@@ -6,4 +6,4 @@ True
 
 import importlib.metadata
 
-__version__ = importlib.metadata.version("rCradle")
+__version__ = importlib.metadata.version("rhiza-cradle")
