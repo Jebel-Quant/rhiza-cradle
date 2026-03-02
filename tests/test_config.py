@@ -84,6 +84,18 @@ class TestReadConfig:
         with pytest.raises(FileNotFoundError):
             _read_config(tmp_path / "nonexistent.yaml")
 
+    def test_defaults_to_config_file(self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+        """Uses CONFIG_FILE and calls _ensure_config_file when no path is given."""
+        config_dir = tmp_path / ".cradle"
+        config_file = config_dir / "config.yaml"
+
+        monkeypatch.setattr("cradle.config.CONFIG_DIR", config_dir)
+        monkeypatch.setattr("cradle.config.CONFIG_FILE", config_file)
+
+        result = _read_config()
+
+        assert result == DEFAULT_CONFIG
+
 
 class TestGetAllTemplates:
     """Tests for get_all_templates."""
