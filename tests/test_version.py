@@ -13,4 +13,3 @@ def test_version_is_string():
 def test_version_matches_metadata():
     """Verify __version__ matches the installed package metadata."""
     assert cradle.__version__ == importlib.metadata.version("rCradle")
-
