@@ -1,7 +1,7 @@
 # Project metadata and package information
 [project]
 name = "rhiza-cradle"
-version = "0.1.0"
+version = "0.2.0"
 description = "CLI to create repos"
 readme = "README.md"
 authors = [{ name = "Jebel Quant Research", email = "contact@jqr.ae" }]
