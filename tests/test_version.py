@@ -14,7 +14,3 @@ def test_version_matches_metadata():
     """Verify __version__ matches the installed package metadata."""
     assert cradle.__version__ == importlib.metadata.version("rCradle")
 
-
-def test_version_value():
-    """Verify __version__ has the expected value from pyproject.toml."""
-    assert cradle.__version__ == "0.1.0"
